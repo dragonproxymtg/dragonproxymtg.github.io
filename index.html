@@ -9,8 +9,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DragonProxy">
 <meta property="og:title" content="Black Friday DragonProxy — portamazzo e buste in regalo">
-<meta property="og:description" content="Proxy Magic in Matte, Glossy e Foil. Ordina entro il 30/11: portamazzo e buste protettive sono in regalo.">
+<meta property="og:description" content="Proxy Magic e mazzi custom a tema. Ordina entro il 30/11: portamazzo e buste protettive sono in regalo.">
 <meta property="og:url" content="https://dragonproxymtg.it/">
+<meta property="og:image" content="https://dragonproxymtg.it/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dragonproxymtg.it/img/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307090d'/%3E%3Cpath d='M32 8 52 32 32 56 12 32Z' fill='none' stroke='%23d9b45a' stroke-width='5'/%3E%3Cpath d='M32 22 42 32 32 42 22 32Z' fill='%2333d1c4'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,25 +78,24 @@ p.lead{color:var(--muted);max-width:60ch}
 .kw code{font:700 .95rem Inter;color:var(--teal);background:rgba(51,209,196,.1);border:1px dashed rgba(51,209,196,.5);border-radius:8px;padding:.15rem .5rem;cursor:pointer}
 
 /* cards fan */
-.fan{position:relative;height:420px}
-.card{position:absolute;top:50%;left:50%;width:220px;aspect-ratio:63/88;border-radius:14px;padding:10px;background:linear-gradient(160deg,#2a2418,#14110b);border:1px solid rgba(243,220,151,.35);box-shadow:0 30px 60px rgba(0,0,0,.6);transform-origin:50% 120%;transition:transform .4s}
-.card .art{height:58%;border-radius:8px;position:relative;overflow:hidden}
-.card .name{margin:8px 2px 6px;font:700 .9rem Cinzel,serif;color:var(--gold2);display:flex;justify-content:space-between}
-.card .txt{height:22%;border-radius:6px;background:rgba(239,230,210,.08);padding:8px}
-.card .txt i{display:block;height:5px;border-radius:3px;background:rgba(239,230,210,.18);margin-bottom:6px}
-.card .txt i:nth-child(2){width:80%}.card .txt i:nth-child(3){width:60%}
-.card .foot{position:absolute;bottom:7px;left:0;right:0;text-align:center;font:600 .52rem Inter;letter-spacing:.2em;color:rgba(239,230,210,.45)}
-.c1{transform:translate(-50%,-50%) rotate(-14deg) translateX(-70px)}
-.c2{transform:translate(-50%,-50%) rotate(0deg) translateY(-14px);z-index:2}
-.c3{transform:translate(-50%,-50%) rotate(14deg) translateX(70px)}
-.c1 .art{background:radial-gradient(circle at 30% 70%,#6b3b1f,transparent 60%),radial-gradient(circle at 70% 30%,#c9773a,transparent 55%),#2b1a12}
-.c3 .art{background:radial-gradient(circle at 60% 60%,#1f4f6b,transparent 60%),radial-gradient(circle at 25% 25%,#7fd4ff,transparent 45%),#0f1c2b}
-.c2 .art{background:radial-gradient(circle at 50% 80%,#3a1b5e,transparent 60%),radial-gradient(circle at 50% 20%,#d9b45a,transparent 50%),#140f22}
-.c2 .art::after,.foil-sheen::after{content:"";position:absolute;inset:-50%;background:linear-gradient(115deg,transparent 30%,rgba(255,120,200,.35) 40%,rgba(120,255,240,.4) 47%,rgba(255,240,140,.4) 54%,transparent 64%);animation:sheen 3.2s ease-in-out infinite;mix-blend-mode:screen}
-.c2{background:linear-gradient(160deg,#3a3222,#17130c);border-color:rgba(243,220,151,.6)}
-@keyframes sheen{0%{transform:translateX(-40%)}60%,100%{transform:translateX(40%)}}
-.c3 .art::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.35),transparent 35%)}
-.dragon{position:absolute;inset:0;margin:auto;width:70%;opacity:.85}
+.fan{position:relative;height:500px}
+.card{position:absolute;top:50%;left:50%;width:265px;aspect-ratio:440/615;border-radius:11px;box-shadow:0 30px 60px rgba(0,0,0,.65);transition:transform .4s}
+.card img{display:block;width:100%;height:100%;border-radius:11px}
+.card.foil::after{content:"";position:absolute;inset:0;border-radius:11px;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.22) 45%,rgba(160,255,240,.18) 50%,transparent 60%);background-size:250% 100%;animation:sheen 4s ease-in-out infinite;mix-blend-mode:screen;pointer-events:none}
+@keyframes sheen{0%{background-position:120% 0}60%,100%{background-position:-60% 0}}
+.tag{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);background:#0b0e14;border:1px solid rgba(243,220,151,.5);color:var(--gold2);font:700 .7rem Inter;letter-spacing:.16em;text-transform:uppercase;padding:.3rem .7rem;border-radius:999px;white-space:nowrap}
+.c1{transform:translate(-50%,-50%) rotate(-13deg) translateX(-95px)}
+.c2{transform:translate(-50%,-50%) translateY(-16px);z-index:2}
+.c3{transform:translate(-50%,-50%) rotate(13deg) translateX(95px)}
+
+/* gallery */
+.gallery{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;margin:2rem -20px 0;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.gallery figure{flex:0 0 210px;scroll-snap-align:start;margin:0}
+.gallery img{display:block;width:100%;height:auto;aspect-ratio:440/615;border-radius:10px;box-shadow:0 14px 30px rgba(0,0,0,.55);transition:transform .25s}
+.gallery figure:hover img{transform:translateY(-6px)}
+.gallery figcaption{margin-top:.7rem;text-align:center;font:700 .95rem Cinzel,serif;color:var(--gold2)}
+.more-line{margin-top:1rem;color:var(--muted)}
+.more-line a{color:var(--teal);font-weight:600}
 
 /* sections */
 section{padding:72px 0}
@@ -143,22 +147,22 @@ footer a:hover{color:var(--teal)}
 
 @media (max-width:900px){
   .hero .wrap{grid-template-columns:1fr;gap:10px}
-  .fan{height:330px;order:-1}
-  .card{width:170px}
-  .c1{transform:translate(-50%,-50%) rotate(-14deg) translateX(-56px)}
-  .c3{transform:translate(-50%,-50%) rotate(14deg) translateX(56px)}
+  .fan{height:350px;order:-1}
+  .card{width:180px}
+  .c1{transform:translate(-50%,-50%) rotate(-13deg) translateX(-62px)}
+  .c3{transform:translate(-50%,-50%) rotate(13deg) translateX(62px)}
   .grid3,.grid4{grid-template-columns:1fr 1fr}
+  .gallery figure{flex-basis:58vw;max-width:260px}
   .top .btn{display:none}
   .sticky{display:block}
 }
 @media (max-width:560px){
   .hero{padding:8px 0 48px}
-  .fan{height:250px}
-  .card{width:132px}
-  .c1{transform:translate(-50%,-50%) rotate(-14deg) translateX(-48px)}
-  .c3{transform:translate(-50%,-50%) rotate(14deg) translateX(48px)}
-  .card .name{font-size:.75rem}
-  .card .txt{height:15%}
+  .fan{height:290px}
+  .card{width:150px}
+  .c1{transform:translate(-50%,-50%) rotate(-13deg) translateX(-56px)}
+  .c3{transform:translate(-50%,-50%) rotate(13deg) translateX(56px)}
+  .tag{font-size:.6rem;padding:.25rem .55rem}
   .hero h1{margin-top:.8rem}
   .grid3,.grid4{grid-template-columns:1fr}
   .count div{min-width:0;flex:1}
@@ -209,9 +213,9 @@ footer a:hover{color:var(--teal)}
       </div>
 
       <div class="fan" aria-hidden="true">
-        <div class="card c1"><div class="art"><svg class="dragon" viewBox="0 0 100 100"><path d="M50 12 66 40 88 44 70 60 74 86 50 74 26 86 30 60 12 44 34 40Z" fill="none" stroke="rgba(243,220,151,.5)" stroke-width="2"/></svg></div><div class="name">Matte <span>✦</span></div><div class="txt"><i></i><i></i><i></i></div><div class="foot">DRAGONPROXYMTG</div></div>
-        <div class="card c3"><div class="art"><svg class="dragon" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(200,240,255,.5)" stroke-width="2"/><circle cx="50" cy="50" r="14" fill="rgba(200,240,255,.25)"/></svg></div><div class="name">Glossy <span>✦</span></div><div class="txt"><i></i><i></i><i></i></div><div class="foot">DRAGONPROXYMTG</div></div>
-        <div class="card c2"><div class="art"><svg class="dragon" viewBox="0 0 100 100"><path d="M50 10 84 50 50 90 16 50Z" fill="none" stroke="rgba(243,220,151,.8)" stroke-width="2.5"/><path d="M50 32 68 50 50 68 32 50Z" fill="rgba(51,209,196,.6)"/></svg></div><div class="name">Foil <span>✦</span></div><div class="txt"><i></i><i></i><i></i></div><div class="foot">DRAGONPROXYMTG</div></div>
+        <div class="card c1"><img src="img/onepiece.webp" alt="" width="440" height="615"></div>
+        <div class="card c3"><img src="img/bleach.webp" alt="" width="440" height="615"></div>
+        <div class="card c2 foil"><img src="img/jjk.webp" alt="" width="440" height="615"></div>
       </div>
     </div>
   </section>
@@ -257,18 +261,19 @@ footer a:hover{color:var(--teal)}
     <div class="wrap">
       <span class="eyebrow">Mazzi custom</span>
       <h2>Il tuo Commander, a tema</h2>
-      <p class="lead">Mazzi completi con arte a tema delle tue serie preferite, con testi leggibili come le carte vere e retro fantasy con il nostro logo.</p>
-      <div class="chips">
-        <span class="chip">Attack on Titan</span>
-        <span class="chip">Naruto</span>
-        <span class="chip">Jujutsu Kaisen</span>
-        <span class="chip">Bleach</span>
-        <span class="chip">One Piece</span>
-        <span class="chip">Dark Souls &amp; Elden Ring</span>
-        <span class="chip">Warhammer 40K</span>
-        <span class="chip">StarCraft</span>
-        <span class="chip more">+ il tuo tema</span>
+      <p class="lead">Alcuni dei nostri mazzi custom: un comandante per ogni serie. Mazzi completi con arte a tema delle tue serie preferite, con testi leggibili come le carte vere e retro fantasy con il nostro logo.</p>
+      <div class="gallery">
+        <figure><img src="img/aot.webp" alt="Proxy custom a tema Attack on Titan" width="440" height="615" loading="lazy"><figcaption>Attack on Titan</figcaption></figure>
+        <figure><img src="img/naruto.webp" alt="Proxy custom a tema Naruto" width="440" height="615" loading="lazy"><figcaption>Naruto</figcaption></figure>
+        <figure><img src="img/jjk.webp" alt="Proxy custom a tema Jujutsu Kaisen" width="440" height="615" loading="lazy"><figcaption>Jujutsu Kaisen</figcaption></figure>
+        <figure><img src="img/bleach.webp" alt="Proxy custom a tema Bleach" width="440" height="615" loading="lazy"><figcaption>Bleach</figcaption></figure>
+        <figure><img src="img/onepiece.webp" alt="Proxy custom a tema One Piece" width="440" height="615" loading="lazy"><figcaption>One Piece</figcaption></figure>
+        <figure><img src="img/souls.webp" alt="Proxy custom a tema Dark Souls &amp; Elden Ring" width="440" height="615" loading="lazy"><figcaption>Dark Souls &amp; Elden Ring</figcaption></figure>
+        <figure><img src="img/starcraft.webp" alt="Proxy custom a tema StarCraft" width="440" height="615" loading="lazy"><figcaption>StarCraft</figcaption></figure>
+        <figure><img src="img/e33.webp" alt="Proxy custom a tema Expedition 33" width="440" height="615" loading="lazy"><figcaption>Expedition 33</figcaption></figure>
+        <figure><img src="img/edgerunners.webp" alt="Proxy custom a tema Cyberpunk: Edgerunners" width="440" height="615" loading="lazy"><figcaption>Cyberpunk: Edgerunners</figcaption></figure>
       </div>
+      <p class="more-line">La tua serie non c'è? <a class="js-dm" href="https://ig.me/m/dragonproxymtg">Scrivici</a>: facciamo il mazzo a tema.</p>
     </div>
   </section>
 
